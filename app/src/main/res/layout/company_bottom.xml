@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:windowSoftInputMode="stateHidden"
+    android:id="@+id/company_bottom"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите название компании: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/addCompanyName"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Название"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите год лицензии: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/addLicenseYear"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Год лицензии"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите телефон компании: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/addPhoneCompany"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Телефон компании"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Укажите город: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <Spinner
+                android:id="@+id/companyCitySpinner"
+                android:layout_width="450dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Укажите тип собственности: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <Spinner
+                android:id="@+id/companyTypeSpinner"
+                android:layout_width="450dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonAddCompanyBottom"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="00dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="Создать"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

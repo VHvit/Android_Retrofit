@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F318252E"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtUser"
+        android:layout_width="355dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Username"
+        android:textSize="25dp"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#F38A8A8A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="274dp"
+        android:layout_height="283dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <Button
+        android:id="@+id/buAuthorization"
+        android:layout_width="355dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/cyan"
+        android:onClick="buAuthorization"
+        android:text="Login"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass"
+        app:layout_constraintVertical_bias="0.308" />
+
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="355dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hapticFeedbackEnabled="false"
+        android:hint="Password"
+        android:textSize="25dp"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#F38A8A8A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="1122dp"
+        android:layout_height="982dp"
+        android:layout_marginEnd="528dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503"
+        app:srcCompat="@drawable/backlogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

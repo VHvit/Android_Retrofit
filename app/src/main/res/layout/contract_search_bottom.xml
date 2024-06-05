@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:windowSoftInputMode="stateHidden"
+    android:id="@+id/contract_search_bottom"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите сумму контракта: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/searchSumm"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Сумма контракта"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите дату создания контракта: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/searchDate"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Дата создания"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Укажите вид страхования: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerSearchContractView"
+                android:layout_width="450dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="15dp"
+                android:text="Укажите состояние контракта: "
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerSearchContractStatus"
+                android:layout_width="450dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSearchContractBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="00dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:text="Поиск"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

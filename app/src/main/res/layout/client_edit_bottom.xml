@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:windowSoftInputMode="stateHidden"
+    android:id="@+id/client_edit_bottom"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@drawable/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите фамилию: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/clientLastname"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Фамилия"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите имя: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/clientFirstname"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Имя"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите отчество: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/clientMiddlename"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Отчество"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Укажите социальное положение: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <Spinner
+                android:id="@+id/clientStatusSpinner"
+                android:layout_width="450dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите номер телефона: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/clientPhone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Номер телефона"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите дату рождения: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/updateBirthday"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Дата рождения"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonEditClientBottom"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Сохранить"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

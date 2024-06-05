@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:windowSoftInputMode="stateHidden"
+    android:id="@+id/branch_edit_bottom"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите название филиала: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/editBranchName"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="название филиала"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите адрес филиала: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/editBranchAddress"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="адрес филиала"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите телефон филиала: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/editPhoneBranch"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="телефон филиала"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите кол-во сотрудников: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/editEmployeeCount"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="кол-во сотрудников"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Укажите город: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <Spinner
+                android:id="@+id/branchEditCitySpinner"
+                android:layout_width="450dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Укажите компанию на которую работает филиал: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <Spinner
+                android:id="@+id/branchEditCompanySpinner"
+                android:layout_width="450dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonEditBranchBottom"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="00dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="Сохранить"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

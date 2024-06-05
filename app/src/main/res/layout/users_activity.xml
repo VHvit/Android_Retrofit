@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsersActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/details_query_static"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Добро пожаловать в раздел управления пользователями!"
+                        android:textSize="30dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Здесь вы можете производить следующие действия:"
+                        android:textSize="30dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:text="Создание сотрудника: Сотрудник работает с контрактами и обновляет информацию о клиентах. Для создания пользователя укажите логин, пароль и филиал ниже."
+                        android:textSize="30dp"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editAddUsername"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:ems="10"
+                            android:hint="Имя пользователя"
+                            android:padding="10dp"
+                            android:textColorHint="#F38A8A8A"
+                            android:textSize="27dp" />
+
+                        <EditText
+                            android:id="@+id/editAddPassword"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:ems="10"
+                            android:hint="Пароль"
+                            android:padding="10dp"
+                            android:textColorHint="#F38A8A8A"
+                            android:textSize="27dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonAddEmployee"
+                            android:layout_width="375dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="Создать сотрудника"
+                            android:textAllCaps="false"
+                            android:textSize="30dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <Spinner
+                            android:id="@+id/branch_spinner"
+                            android:layout_width="450dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="20dp"
+                        android:text="Создание Администратора: Администратор обновляет информацию в справочниках а также устанавливает актуальную информацию о компаниях и их филиалах. Для создания пользователя введите логин и пароль ниже."
+                        android:textSize="30dp"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <Button
+                        android:id="@+id/buttonAddAdmin"
+                        android:layout_width="460dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Создать администратора"
+                        android:textAllCaps="false"
+                        android:textSize="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="20dp"
+                        android:text="Создание Статиста: Статист собирает данные о деятельностях страховых контрактов и создаёт отчёты для руководства. Для создания пользователя укажите логин и пароль ниже."
+                        android:textSize="30dp"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <Button
+                        android:id="@+id/buttonAddStatist"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Создать cтатиста"
+                        android:textAllCaps="false"
+                        android:textSize="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="20dp"
+                        android:text="Редактирование пользователя: Введите имя пользователя и новый пароль ниже чтобы изменить пароль. После нажатия на кнопку пароль будет изменён на новый."
+                        android:textSize="30dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editUpdateUsername"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:ems="10"
+                            android:hint="Имя пользователя"
+                            android:padding="10dp"
+                            android:textColorHint="#F38A8A8A"
+                            android:textSize="30dp" />
+
+                        <EditText
+                            android:id="@+id/editUpdatePassword"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:ems="10"
+                            android:hint="Пароль"
+                            android:padding="10dp"
+                            android:textColorHint="#F38A8A8A"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:id="@+id/buttonUpdate"
+                            android:layout_width="530dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Редактировать пользователя"
+                            android:textAllCaps="false"
+                            android:textSize="30dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="20dp"
+                        android:text="Удаление пользователя: Введите имя пользователя ниже и нажмите кнопку 'Удалить пользователя' и учётная запись пользователя будет удалена из системы. Будьте внимательны, этот процесс необратим!"
+                        android:textSize="30dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editDeleteUsername"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:ems="10"
+                            android:hint="Имя пользователя"
+                            android:padding="10dp"
+                            android:textColorHint="#F38A8A8A"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:id="@+id/buttonDelete"
+                            android:layout_width="410dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Удалить пользователя"
+                            android:textAllCaps="false"
+                            android:textSize="30dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Просмотр списка пользователей: Просмотрите список всех пользователей в системе, их роли и другую информацию для удобства управления."
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Список всех пользователей в системе, с ролью Сотрудника."
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/usersEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="usersEmployee"
+                    android:textSize="30dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Список всех пользователей в системе, с ролью Администратора."
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/usersAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="usersAdmin"
+                    android:textSize="30dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Список всех пользователей в системе, с ролью Статиста."
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/usersStatist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="usersStatist"
+                    android:textSize="30dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

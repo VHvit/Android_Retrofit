@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/black">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recView"
+          android:layout_width="895dp"
+          android:layout_height="775dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="1.0" />
+
+      <TextView
+          android:id="@+id/listCounter"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:textColor="#FFF"
+          android:textSize="30dp"
+          app:layout_constraintBottom_toTopOf="@+id/recView"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="@+id/recView"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="1.0" />
+
+      <Button
+          android:id="@+id/buttonLoadCity"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="12dp"
+          android:text="Города"
+          android:textAllCaps="false"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <Button
+          android:id="@+id/buttonLoadStatus"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="8dp"
+          android:text="Социал. статусы"
+          android:textAllCaps="false"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/buttonLoadCity" />
+
+      <Button
+          android:id="@+id/buttonLoadContract"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="12dp"
+          android:text="Контракты"
+          android:textAllCaps="false"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <Button
+          android:id="@+id/buttonLoadClient"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="8dp"
+          android:text="Клиенты"
+          android:textAllCaps="false"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/buttonLoadContract" />
+
+      <Button
+          android:id="@+id/buttonLoadContractStatus"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="8dp"
+          android:text="Сост. контрактов"
+          android:textAllCaps="false"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/buttonLoadView" />
+
+      <Button
+          android:id="@+id/buttonLoadCompany"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="8dp"
+          android:text="Компании"
+          android:textAllCaps="false"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/buttonLoadContractStatus" />
+
+      <Button
+          android:id="@+id/buttonLoadBranch"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="8dp"
+          android:text="Филиалы"
+          android:textAllCaps="false"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/buttonLoadCompany" />
+
+      <Button
+          android:id="@+id/buttonLoadUsers"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="8dp"
+          android:text="Пользователи"
+          android:textAllCaps="false"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/buttonLoadBranch" />
+
+      <Button
+          android:id="@+id/buttonLoadView"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="8dp"
+          android:text="Виды страхования"
+          android:textAllCaps="false"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/buttonLoadType" />
+
+      <Button
+          android:id="@+id/buttonLoadType"
+          android:layout_width="375dp"
+          android:layout_height="65dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="8dp"
+          android:text="Типы собственности"
+          android:textAllCaps="false"
+
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/buttonLoadStatus" />
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddCity"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          android:visibility="invisible"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddStatus"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          android:visibility="invisible"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddType"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          android:visibility="invisible"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddView"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          android:visibility="invisible"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddContract"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          android:visibility="invisible"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddClient"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          android:visibility="invisible"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddContractStatus"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          android:visibility="invisible"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddBranch"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          android:visibility="invisible"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddCompany"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          android:visibility="invisible"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonSearchCity"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="100dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/zaloopa"
+          android:visibility="invisible"
+          app:backgroundTint="#fff"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="50dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonSearchStatus"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="100dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/zaloopa"
+          android:visibility="invisible"
+          app:backgroundTint="#fff"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="50dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonSearchType"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="100dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/zaloopa"
+          android:visibility="invisible"
+          app:backgroundTint="#fff"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="50dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonSearchView"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="100dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/zaloopa"
+          android:visibility="invisible"
+          app:backgroundTint="#fff"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="50dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonSearchContract"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/zaloopa"
+          android:visibility="invisible"
+          app:backgroundTint="#fff"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="50dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonSearchClient"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="100dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/zaloopa"
+          android:visibility="invisible"
+          app:backgroundTint="#fff"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="50dp"/>
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonSearchContractStatus"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="100dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/zaloopa"
+          android:visibility="invisible"
+          app:backgroundTint="#fff"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="50dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonSearchCompany"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="100dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/zaloopa"
+          android:visibility="invisible"
+          app:backgroundTint="#fff"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="50dp"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonSearchBranch"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_marginEnd="100dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/zaloopa"
+          android:visibility="invisible"
+          app:backgroundTint="#fff"
+          app:fabCustomSize="70dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="50dp"/>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  <!-- Панель навигации (Drawer) -->
+  <com.google.android.material.navigation.NavigationView
+      android:id="@+id/navigation_view"
+      android:layout_width="895dp"
+      android:layout_height="match_parent"
+      android:layout_gravity="end"
+      android:background="@android:color/white">
+
+    <!-- Пример содержимого панели -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="895dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/black">
+
+      <TextView
+          android:id="@+id/listCounterSostavnaya"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="4dp"
+          android:text="lolkek"
+          android:textColor="#FFF"
+          android:textSize="30dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recViewSostavnaya"
+            android:layout_width="895dp"
+            android:layout_height="775dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/buttonAddContractSostavnaya"
+          android:layout_width="80dp"
+          android:layout_height="80dp"
+          android:layout_marginEnd="14dp"
+          android:layout_marginBottom="14dp"
+          android:src="@drawable/plus"
+          app:backgroundTint="#12E60B"
+          app:fabCustomSize="80dp"
+          app:fabSize="auto"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:maxImageSize="70dp"/>
+
+      <!-- Добавьте другие элементы навигации по необходимости -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

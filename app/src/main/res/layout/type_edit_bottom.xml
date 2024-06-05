@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:windowSoftInputMode="stateHidden"
+    android:id="@+id/type_edit_bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@drawable/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Введите тип собственности: "
+                android:textColor="@color/white"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/typeValue"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Тип собственности"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="0dp">
+
+            <Button
+                android:id="@+id/buttonEditTypeBottom"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="0dp"
+                android:gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:text="Сохранить"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
